@@ -1,0 +1,17 @@
+<div class="buscador__container">
+    <input [(ngModel)]="search"  class="form-label" type="text">  
+    <button type="button" class="btn btn-outline-dark" (click)="searchSeason()">Buscar</button>
+</div>
+@if (season.length > 0) {
+    <div class="cards__container">
+      @for ( season of season; track season.id) {
+       <app-card [season]="season" (onDetailClick)="showDetails($event)">
+
+       </app-card>
+      }
+    </div>
+  }
+     
+  @if(season.length===0){
+    no hay resultados
+}

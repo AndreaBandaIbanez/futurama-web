@@ -1,0 +1,17 @@
+<div class="nav__container">
+    <div class="nav__container--left">  
+        <div class="nav__logo">
+            <img class="nav__logo--img" [src]="getLogo()"/>
+        </div>
+        <div class="nav__item" (click)="navigateTo('main')">Home</div>
+        <div class="nav__item" (click)="navigateTo('characters')">Characters</div>
+        <div class="nav__item" (click)="navigateTo('episodes')">Episodes</div>
+        <div class="nav__item" (click)="navigateTo('seasons')">Seasons</div>
+        
+    </div>
+    <div class="nav__container--right">
+    <div class="nav__item" (click)="navigateTo('contact')">Contact</div>
+        </div>
+</div>
+
+  

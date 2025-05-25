@@ -1,0 +1,26 @@
+@if(episode){
+<div class="detail__container">
+    <div class="button__container">
+        <div class="detail__header">
+            <div class="detail__header--txt">Detalles</div>
+        </div>
+        <p-button
+        size='small' icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" [raised]="true" (click)="close()"/>
+    </div>
+
+    <div class="detail__body">
+      
+        <div class="right__box">
+            <div class="char__detail">Nombre: {{episode.name}}</div>
+            <div class="char__detail">Numero: {{episode.number}}</div>
+            <div class="char__detail">ProductionCode: {{episode.productionCode}}</div>
+            <div class="char__detail">AirDate: {{episode.airDate}}</div>
+            <div class="char__detail">createdAt: {{episode.createdAt}}</div>
+            <div class="char__detail">Season: {{episode.season.id}}</div>
+            <div class="char__detail">BrodcastCode: {{episode.broadcastCode}}</div>
+
+
+        </div>
+    </div>
+</div>
+}

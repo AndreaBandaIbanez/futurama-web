@@ -1,0 +1,32 @@
+@if(season){
+    <div class="detail__container">
+        <div class="button__container">
+            <div class="detail__header">
+                <div class="detail__header--txt">Detalles</div>
+            </div>
+            <p-button
+            size='small' icon="pi pi-times" [rounded]="true" [text]="true" severity="danger" [raised]="true" (click)="close()"/>
+        </div>
+    
+        <div class="detail__body">
+          
+            <div class="right__box">
+                @for (episode of season.episodes; track season.id) {
+                    <div class="char__card__content--details">
+                      <div class="char__card__content--details--gender">
+                        Primer episodio: {{episode.name}}
+                      </div>
+                      <div class="char__card__content--details--species">
+                        Número de episodio: {{episode.number}}
+                      </div>
+                      <div class="char__card__content--details--status">
+                        Código de producción: {{episode.productionCode}}
+                      </div>
+                    </div>
+                  }
+            </div>
+        </div>
+    </div>
+    }
+    
+

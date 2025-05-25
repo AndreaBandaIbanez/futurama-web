@@ -1,0 +1,22 @@
+<div class="buscador__container">
+    <input [(ngModel)]="search"  class="form-label" type="text">  
+    <button type="button" class="btn btn-outline-dark" (click)="searchEpisod()">Buscar</button>
+</div>
+@if (episodes.length>0){
+    <div class="cards__container">
+        @for (episode of episodes; track episode.id) {
+         <app-card [episode]="episode" (onDetailClick)="showDetails($event)">
+
+         </app-card>
+        }
+    </div>
+    
+<div class="paginator__container">
+<ngb-pagination 
+[collectionSize]="totalEpisodes" [(page)]="currentPage" size="lg" (pageChange)="onPageChange()" [maxSize]="4" [pageSize]="pageSize"/>
+</div>
+
+}
+@if(episodes.length===0){
+    no hay resultados
+}

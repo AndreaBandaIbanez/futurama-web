@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="form__container">
+        <form [formGroup]="filterForm!">
+            <div> <label  for="FormControlInput1" class="form-label">name</label>
+           <input formControlName="name" class="form-control" type="text" placeholder="Escribe tu nombre" aria-label="default input">
+          @if(hasErrors('name')){
+            <small class="formcontrol__e"> *rellena el campo </small>
+          }
+            </div>
+
+            <div>
+           <label  for="FormControlInput1" class="form-label">apellidos</label>
+            <input formControlName="apellidos" class="form-control" type="text" placeholder="Escribe tus apellidos" aria-label="default input"> 
+          
+           @if(hasErrors('apellidos')){
+            <small class="formcontrol__e"> *rellena el campo </small>
+          }
+            <div class="mb-3">
+            </div>
+
+  <label  for="emailFormControlInput1" class="form-label">Correo electrónico</label>
+  <input formControlName="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+   @if(hasErrors('email')){
+            <small class="formcontrol__e"> *rellena el campo </small>
+          }
+
+</div>
+
+
+ <label  for="FormControlInput1" class="form-label">comentario</label>   
+            <div class="form-floating">
+            
+  <textarea formControlName="comentario" class="form-control" placeholder="deja tu comentario" id="floatingTextarea2" style="height: 100px"></textarea>
+   @if(hasErrors('comentario')){
+            <small class="formcontrol__e"> *rellena el campo </small>
+          }
+</div>
+
+
+           @if(verifiFields()){
+        <button type="button" class="btn btn-primary" (click)="sendComment()">enviar</button>
+           } @else {
+            <button type="button" class="btn btn-primary" disabled>enviar</button>
+           }
+         </form>
+    </div>
+</div>

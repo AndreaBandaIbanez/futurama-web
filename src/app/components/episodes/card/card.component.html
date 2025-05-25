@@ -1,0 +1,23 @@
+@if(episode){
+    <div class="char__card">
+    <div class="char__card__content">
+        <div class="char__card__content--title">{{ episode.name }}</div>
+        <div class="char__card__content--details">
+            <div class="char__card__content--details--gender">
+                Episodio: {{episode.number}}
+            </div>
+            <div class="char__card__content--details--species">
+                Duration: {{episode.duration}}
+            </div>
+            <div class="char__card__content--details--status">
+                AirDate: {{episode.airDate}}
+            </div>
+        </div>
+    </div>
+    <div class="char__card__footer">
+        <div class="char__card__footer--btn" (click)="showDetails(episode.id)">
+            Detalles
+        </div>
+    </div>
+</div>
+} 

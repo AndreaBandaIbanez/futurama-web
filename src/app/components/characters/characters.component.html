@@ -1,0 +1,20 @@
+<div class="buscador__container">
+    <input [(ngModel)]="search"  class="form-label" type="text">  
+    <button type="button" class="btn btn-outline-dark" (click)="searchChar()">Buscar</button>
+</div>
+@if (characters.length>0){
+    <div class="cards__container">
+        @for (character of characters; track character.id) {
+         <app-card [character]="character" (onDetailClick)="showDetails($event)">
+
+         </app-card>
+        }
+    </div>
+        }
+
+<div class="paginator__container">
+<ngb-pagination 
+[collectionSize]="totalCharacters" [(page)]="currentPage" size="lg" (pageChange)="onPageChange()" [maxSize]="4" [pageSize]="pageSize"/>
+</div> 
+
+

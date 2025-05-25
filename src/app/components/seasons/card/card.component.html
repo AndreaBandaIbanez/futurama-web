@@ -1,0 +1,16 @@
+@if(season){
+<div class="char__card">
+    <div class="char__card__content">
+      <div class="char__card__content--title">
+        Temporada: {{ season.id }}
+      </div>
+     
+    </div>
+    <div class="char__card__footer">
+      <div class="char__card__footer--btn" (click)="showDetails(season.id)">
+        Detalles
+      </div>
+    </div>
+  </div>
+
+}

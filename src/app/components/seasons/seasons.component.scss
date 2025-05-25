@@ -1,0 +1,37 @@
+.cards__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+ 
+  
+}
+ 
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+ 
+@keyframes press {
+    0% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+
+.buscador__container{
+    
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:1% ;
+    justify-content: right;
+    margin-right: 1%;
+}
